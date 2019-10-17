@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="tieacherWEB">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Controller"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/DAO"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/BO"/>
+        <property name="context-root" value="tieacherWEB"/>
+        <property name="java-output-path" value="/tieacherWEB/build/classes"/>
+    </wb-module>
+</project-modules>
