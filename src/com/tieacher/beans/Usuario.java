@@ -2,18 +2,21 @@ package com.tieacher.beans;
 
 public class Usuario {
 	private String nome;
-	private String numero;
+	private String telefone;
 	private String email;
 	private String password;
 	
 	public Usuario() 
 	{
-		
+		this.nome = "";
+		this.telefone = "";
+		this.email = "";
+		this.password = "";
 	}
 	
-	public Usuario(String nome, String numero, String email, String password) {
+	public Usuario(String nome, String telefone, String email, String password) {
 		this.nome = nome;
-		this.numero = numero;
+		this.telefone = telefone;
 		this.email = email;
 		this.password = password;
 	}
@@ -24,11 +27,11 @@ public class Usuario {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getNumero() {
-		return numero;
+	public String getTelefone() {
+		return telefone;
 	}
-	public void setNumero(String numero) {
-		this.numero = numero;
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
 	}
 	public String getEmail() {
 		return email;

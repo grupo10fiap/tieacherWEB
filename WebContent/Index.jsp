@@ -18,24 +18,27 @@
 <body>
 
     <section class="login">
+       <span class="error">${msgErro}</span>
+    
         <div class="form-login">
-            <form>
+            <form action=  "${pageContext.request.contextPath}/Login" method="post">
               <div class="container1">
                 <div class="chat1">
                   <a id="chatbot"><img src="./Images/pri.png" alt=""></a>
+                  </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="login">Login</label>
-                        <input type="text" class="form-control" id="login">
+                        <input type="text" name="nome" class="form-control" id="login">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4">Senha</label>
-                        <input type="password" class="form-control" id="password">
+                        <input type="password" name="senha" class="form-control" id="password">
                     </div>
                 </div>
-                <a id ="entrar" class="btn btn-primary entrar">Entrar</a>
-                <a id ="entrar" href="cadastro.html" class="btn btn-primary entrar">Cadastre-se</a>
+                <button id ="entrar" class="btn btn-primary entrar" type="submit">Entrar</button>
+                <a id ="entrar" href="Cadastro.jsp" class="btn btn-primary entrar">Cadastre-se</a>
             </form>
         </div>
     </section>

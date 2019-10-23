@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.tieacher.BO.UsuarioBO;
+
 /**
  * Servlet implementation class Login
  */
@@ -24,10 +26,27 @@ public class Login extends HttpServlet {
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	 */				
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+	        String email = request.getParameter("email");
+	        String senha = request.getParameter("senha");
+	        try {
+	        	UsuarioBO usuario = new UsuarioBO();
+	        	String resposta = usuario.validarLoginUsuario(email, senha);
+	        	if(resposta == "OK")
+	        	{
+	    			RequestDispatcher dispatcher = request.getRequestDispatcher("Home.jsp");
+	        		response.setContentType("text/html");
+	    			dispatcher.forward(request, response);
+	        	}
+	        	request.setAttribute("errorMsg", resposta);
+	            request.getRequestDispatcher("Index.jsp").forward(request, response); 
+	        }catch(Exception ex){
+	        	
+	        }
+	        
+	        
+
 	}
 
 }
